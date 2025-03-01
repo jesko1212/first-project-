@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anutty - Food Order</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #1e1e1e;
+            color: white;
+            text-align: center;
+        }
+        header {
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+        .food-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 0 15px rgba(255, 75, 43, 0.4);
+            text-align: center;
+        }
+        .food-item img {
+            width: 100%;
+            border-radius: 10px;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .food-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .order-btn {
+            background: #ff4b2b;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .order-btn:hover {
+            background: #ff2e00;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Anutty - Order Your Favorite Food
+</header>
+
+<div class="menu">
+    <div class="food-item">
+        <img src="https://images.pexels.com/photos/1025804/pexels-photo-1025804.jpeg" alt="Grilled Steak">
+        <h3>Grilled Steak</h3>
+        <button class="order-btn" onclick="orderNow('Grilled Steak')">Order Now</button>
+    </div>
+    
+    <div class="food-item">
+        <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg" alt="Barbecue Chicken">
+        <h3>Barbecue Chicken</h3>
+        <button class="order-btn" onclick="orderNow('Barbecue Chicken')">Order Now</button>
+    </div>
+
+    <div class="food-item">
+        <img src="https://images.pexels.com/photos/3681642/pexels-photo-3681642.jpeg" alt="Roast Beef">
+        <h3>Roast Beef</h3>
+        <button class="order-btn" onclick="orderNow('Roast Beef')">Order Now</button>
+    </div>
+
+    <div class="food-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Korean_Fried_Chicken-02.jpg" alt="Spicy Fried Chicken">
+        <h3>Spicy Fried Chicken</h3>
+        <button class="order-btn" onclick="orderNow('Spicy Fried Chicken')">Order Now</button>
+    </div>
+
+    <div class="food-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Beef_Burger_%28cropped%29.jpg" alt="Beef Burger">
+        <h3>Beef Burger</h3>
+        <button class="order-btn" onclick="orderNow('Beef Burger')">Order Now</button>
+    </div>
+</div>
+
+<script>
+    function orderNow(foodName) {
+        window.location.href = "order.html?food=" + encodeURIComponent(foodName);
+    }
+</script>
+
+</body>
+</html>
